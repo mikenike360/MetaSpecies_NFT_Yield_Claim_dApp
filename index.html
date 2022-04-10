@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>MetaSpecies Staking dApp</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+</head>
+
+
+<body>
+    <div class="pic">
+        <a href="https://metaspecies.io">
+            <img src="./MetaSpecies.io.png">
+        </a>
+    </div>
+
+    <div class="headcolumn">
+        <div class="headcard">
+            <h3>Welcome to the MetaSpecies Staking App</h3>
+            <p>Earn 20 $SPCC every 24 hours for each MetaSpecies NFT in your wallet!</p>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h3>Connect/Disconnect Wallet</h3>
+            <button class="connect">Connect Wallet</button>
+            <button class="disconnect">Disconnect Wallet</button>
+            <div id="walletHeight">
+                <p>Wallet Address: <br> <span class="showAccount"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card">
+            <h3>Account Balance</h3>
+            <p>$SPCC Balance: <span class="balance"></span></p>
+            <p>Unclaimed $SPCC Balance: <span class="unbalance"></span></p>
+            <button class="claimTokens">Claim $SPCC</button>
+            <button class="calculateTokens">Calculate unclaimed $SPCC</button>
+        </div>
+    </div>
+
+    <div class="columnb">
+        <div class="card">
+            <h3>Unstake your NFTs</h3>
+            <button class="unStakeBatch">Unstake All</button>
+            <button class="unStakeSelected">Unstake Selected</button>
+            <p>Your Staked NFTs</p>
+            <div id="visible-scrollbar">
+                <span class="staked"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
