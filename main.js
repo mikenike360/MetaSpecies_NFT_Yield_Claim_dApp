@@ -111,15 +111,6 @@ async function claimAllTokens() {
     await newSpccContract.methods.claimReward().send({ from: account, maxFeePerGas: baseFee, maxPriorityFeePerGas: baseFee })
 }
 
-async function stakeSelectedNfts() {
-    let baseFee = String(33000000000);
-    selectedNft = document.querySelector('.t.selected')
-    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    const account = accounts[0];
-    // await spccContract.methods.stake.estimateGas
-    await spccContract.methods.stake(selectedNft.innerHTML).send({ from: account, maxFeePerGas: baseFee, maxPriorityFeePerGas: baseFee })
-}
-
 async function unStakeSelectedNfts() {
     let baseFee = String(33000000000);
     selectedNft = document.querySelector('.t.selected')
