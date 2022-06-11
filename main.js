@@ -26,6 +26,7 @@ const unbalance = document.querySelector('.unbalance')
 const claim = document.querySelector('.claimTokens')
 const calc = document.querySelector('.calculateTokens')
 const unStakeSelected = document.querySelector('.unStakeSelected')
+const nftWallet = document.querySelector('.nfts');
 
 let baseFee = String(33000000000);
 //app functions//
@@ -51,6 +52,19 @@ async function getMts() {
 
         combList = Nfts.concat(stakedNFT);
 
+        //creates buttons for unstaked nfts
+        function unStakedBtns() {
+            for (i = 0; i < Nfts.length; i++) {
+                btn = document.createElement("button");
+                btn.className = "t";
+                t = document.createTextNode(Nfts[i]);
+                btn.appendChild(t);
+                unStakedDis = document.querySelector('.nfts');
+                unStakedDis.appendChild(btn);
+            }
+        }
+
+        unStakedBtns();
 
 
         //create buttons for staked nfts

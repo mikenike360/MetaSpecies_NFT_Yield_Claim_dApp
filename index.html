@@ -21,6 +21,7 @@
             <h3>Welcome to the MetaSpecies Auto Yield App</h3>
             <p>Earn 20 $SPCC every 24 hours for each MetaSpecies NFT in your wallet</p>
             <p>To start autoyielding $SPCC connect your wallet and hit the "Claim $SPCC" button</p>
+            <p>You must hit Claim to start the autoyielding process!</p>
         </div>
     </div>
 
@@ -38,17 +39,18 @@
     <div class="column">
         <div class="card">
             <h3>Account Balance</h3>
+            <h4>Make sure you only claim every 24 hours!</h4>
             <p>$SPCC Balance: <span class="balance"></span></p>
-            <p>Unclaimed $SPCC Balance: <span class="unbalance"></span></p>
+            <!-- <p>Unclaimed $SPCC Balance: <span class="unbalance"></span></p> -->
             <button class="claimTokens">Claim $SPCC</button>
-            <button class="calculateTokens">Calculate unclaimed $SPCC</button>
+            <!-- <button class="calculateTokens">Calculate unclaimed $SPCC</button> -->
         </div>
     </div>
 
-    <div class="columnb">
-        <div class="cardb">
+    <div class="column">
+        <div class="card">
             <h3>Unstake your NFTs</h3>
-            <p>Make sure you Unstake your NFT's to start auto yielding $SPCC!</p>
+            <p>Unstake your NFT's to start auto yielding $SPCC!</p>
             <button class="unStakeBatch">Unstake All</button>
             <button class="unStakeSelected">Unstake Selected</button>
             <p>Your Staked NFTs</p>
@@ -58,7 +60,26 @@
         </div>
     </div>
 
-    <script src="./main.js"></script>
+    <div class="column">
+        <div class="card">
+            <h3>Your MetaSpecies NFTs</h3>
+            <div id="visible-scrollbar">
+                <span class="nfts"></span>
+                <div id="contractLink">
+                </div>
+            </div>
+            <a href="https://polygonscan.com/address/0xa8bd82c9065889989cb13511f65570c9f43ba882">
+                <p>Species Coin Contract</p>
+                <a href="https://polygonscan.com/address/0x526d60592806e63d1088bd6ca74956a63d965254">
+                    <p>MetaSpecies Contract</p>
+        </div>
+
+        <div class="footer">
+            <a href="https://metaspecies.io">
+                <p>Back to MetaSpecies.io</p>
+        </div>
+
+        <script src="./main.js"></script>
 </body>
 
 </html>
